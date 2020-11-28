@@ -1,0 +1,36 @@
+@import "./variaveis.scss";
+
+@mixin button-style ($background, $color) {
+    background: $background;
+    color: $color;
+
+    &:hover {
+        background: grayscale($background);
+    }
+}
+
+.btn {
+    width: 200px;
+    padding: 10px 0;
+    background: 0;
+    border: 0;
+    border-radius: 10px;
+
+    &.btn-laranja {
+        @include button-style($laranja, #fff )    
+    }
+    
+    &.btn-azul {
+        @include button-style($azul, #fff);
+        
+    }
+    
+    &.btn-verde{
+        @include button-style($verde, #fff)
+    }
+    &.btn-roxo{
+        @include button-style($roxo, #fff)
+    }
+}
+    
+
